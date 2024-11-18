@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="9.921">
+    <testcase classname="Test the APIs and check the data is correctly displayed" name="valid user can be created" time="4.958">
+        <system-out><![CDATA[Given user invoke the api for user..........................................passed
+When the user will get201 response..........................................passed
+Then user will see all the users............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Test the APIs and check the data is correctly displayed" name="Validate all users get retrieved" time="0.614">
+        <failure message="class java.util.HashMap cannot be cast to class java.util.List (java.util.HashMap and java.util.List are in module java.base of loader 'bootstrap')" type="java.lang.ClassCastException"><![CDATA[Given user invoke the api for "1"...........................................passed
+When the user will get200 response for users "1"............................passed
+Then user will see all the users "1"........................................failed
+
+StackTrace:
+java.lang.ClassCastException: class java.util.HashMap cannot be cast to class java.util.List (java.util.HashMap and java.util.List are in module java.base of loader 'bootstrap')
+	at io.restassured.path.json.JsonPath.getList(JsonPath.java:375)
+	at stepdefs.APITest.user_will_see_all_the_users(APITest.java:50)
+	at ✽.user will see all the users "1"(file:///C:/Users/Admin/TestPerformWorkPlace/NipuniApi/src/test/resources/features/Api.feature:11)
+]]></failure>
+    </testcase>
+    <testcase classname="Test the APIs and check the data is correctly displayed" name="Validate user can be updated" time="4.145">
+        <system-out><![CDATA[Given user invoke the api for update "2"....................................passed
+When the user will get update200  response "2"..............................passed
+Then user will see the updated "2"..........................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
